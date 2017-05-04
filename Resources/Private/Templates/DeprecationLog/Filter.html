@@ -1,0 +1,23 @@
+{namespace logs=VerteXVaaR\Logs\ViewHelpers}
+{namespace core=TYPO3\CMS\Core\ViewHelpers}
+<f:layout name="Backend"/>
+
+<f:section name="LeftToolBar"></f:section>
+<f:section name="RightToolBar"></f:section>
+<f:section name="Welcome"></f:section>
+
+<f:section name="Main">
+	<h1><f:translate key="rows">rows</f:translate> ({rows -> f:count()})</h1>
+	<table class="table">
+		<thead>
+		<tr>
+			<th>Content</th>
+		</tr>
+		</thead>
+		<f:for each="{rows}" as="row">
+			<tr>
+				<td>{row}</td>
+			</tr>
+		</f:for>
+	</table>
+</f:section>

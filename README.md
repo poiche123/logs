@@ -60,6 +60,7 @@ The v2 branch will require at least PHP 7.0 but still support TYPO3 7.6. (Maybe 
 * Ensure log sources are processed only once
 * Identify and fix that one bug that sometimes won't delete a log entry
 * Save the current filter in the user data so it still applies after reopening the module or deletion of an entry
+* Process deprecation log
 
 ## Found a bug? Feedback?
 

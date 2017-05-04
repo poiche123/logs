@@ -1,10 +1,16 @@
+{namespace core=TYPO3\CMS\Core\ViewHelpers}
 <f:be.container>
 	<div class="module" data-module-id="" data-module-name="">
 		<div class="module-docheader t3js-module-docheader">
 			<div
 				class="module-docheader-bar module-docheader-bar-navigation t3js-module-docheader-bar t3js-module-docheader-bar-navigation">
 				<div class="module-docheader-bar-column-left"></div>
-				<div class="module-docheader-bar-column-right"></div>
+				<div class="module-docheader-bar-column-right">
+					<div class="btn-group">
+						<f:link.action action="filter" controller="Log" class="btn btn-default"><core:icon identifier="actions-delete"/></f:link.action>
+						<f:link.action action="filter" controller="DeprecationLog" class="btn btn-default"><core:icon identifier="actions-delete"/></f:link.action>
+					</div>
+				</div>
 			</div>
 			<div
 				class="module-docheader-bar module-docheader-bar-buttons t3js-module-docheader-bar t3js-module-docheader-bar-buttons">
