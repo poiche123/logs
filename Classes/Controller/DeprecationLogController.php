@@ -19,10 +19,15 @@ class DeprecationLogController extends ActionController
         if (file_exists($file)) {
             $handle = fopen($file, 'r');
             while ($row = fgets($handle)) {
+                if (1 === preg_match('~^\d{2}\-\d{2}\-\d{2}\s\d{2}:\d{2}:\s~', $row)) {
+                    $row = substr($row, 16);
+                }
                 $rows[] = $row;
             }
             fclose($handle);
         }
+        $rows = array_count_values($rows);
+        arsort($rows, SORT_DESC);
         $this->view->assign('rows', $rows);
     }
 }

@@ -11,12 +11,14 @@
 	<table class="table">
 		<thead>
 		<tr>
-			<th>Content</th>
+			<th>occurences</th>
+			<th>entry</th>
 		</tr>
 		</thead>
-		<f:for each="{rows}" as="row">
+		<f:for each="{rows}" as="occurences" key="log">
 			<tr>
-				<td>{row}</td>
+				<td>{occurences}</td>
+				<td>{log}</td>
 			</tr>
 		</f:for>
 	</table>
