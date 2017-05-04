@@ -26,6 +26,7 @@ class DeprecationLogController extends ActionController
             }
             fclose($handle);
         }
+        $this->view->assign('totalEntries', count($rows));
         $rows = array_count_values($rows);
         arsort($rows, SORT_DESC);
         $this->view->assign('rows', $rows);

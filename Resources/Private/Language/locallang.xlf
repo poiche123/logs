@@ -60,6 +60,13 @@
 			<trans-unit id="actions">
 				<source>Actions</source>
 			</trans-unit>
+
+			<trans-unit id="deprecation_log">
+				<source>Deprecation Log</source>
+			</trans-unit>
+			<trans-unit id="unique_entries">
+				<source>Unique Entries</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
